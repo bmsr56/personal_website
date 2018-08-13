@@ -1,0 +1,22 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Responsive personal website",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmsr56/personal_website.git"
+  },
+  "author": "Ben Simpson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmsr56/personal_website/issues"
+  },
+  "homepage": "https://github.com/bmsr56/personal_website#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
