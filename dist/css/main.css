@@ -5,13 +5,13 @@
   right: 50px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.15s ease-out; }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 2px;
     margin: 0 0 7px 0;
     background: #fff;
-    transition: all 0.15s ease-out; }
+    transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -23,11 +23,47 @@
       background: gold;
       transform: rotate(-45deg) translate(0px, 0px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #011b32;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.2s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    margin: 0;
+    padding: 0;
+    background: #01294B;
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background: #000;
+  background: #222;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -55,7 +91,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(18, 18, 18, 0.5); }
+    background: rgba(52, 52, 52, 0.5); }
 
 a {
   color: #fff;
@@ -67,7 +103,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #1340E1; }
+  color: #0AF; }
 
 main {
   padding: 4rem;
@@ -75,11 +111,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      color: #000;
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #1340E1;
-        transition: all 0.15s ease-out; }
+        color: #0AF;
+        transition: all "0.15s" ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
