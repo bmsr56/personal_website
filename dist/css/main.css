@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Oswald");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 50px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.15s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 2px;
+    margin: 0 0 7px 0;
+    background: #fff;
+    transition: all 0.15s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      background: gold;
+      transform: rotate(45deg) translate(12px, 13px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      background: gold;
+      transform: rotate(-45deg) translate(0px, 0px); }
+
 * {
   box-sizing: border-box; }
 
